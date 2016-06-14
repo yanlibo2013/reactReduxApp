@@ -1,9 +1,27 @@
-import React from 'react';
+import React,{Component, PropTypes} from 'react'
 
-export default React.createClass({
-    render: function() {
+
+export default class Home extends Component {
+    render() {
+        const {title} = this.props
         return (
-            <h1>App: hello world</h1>
+            <div>
+                <ul id="tab-navs">
+                    {title.map((item, key)=> {
+                        return (
+                            <li key={key}>
+                                <a  href="#">
+                                    {item}
+                                </a>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
         )
     }
-});
+}
+
+Home.propTypes = {
+    title: PropTypes.array.isRequired
+}

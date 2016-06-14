@@ -1,9 +1,16 @@
 import React from 'react'
 import {render} from 'react-dom'
-import App from './component/home.jsx'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import appReducer from './reducer/index.jsx'
+import App from './container/home.jsx'
 import './res/css/index.less'
 
+//创建Store
+const store = createStore(appReducer)
 const root = document.getElementById('app');
 //Provider置于最顶层
 render(
-    <App/>, root);
+    <Provider store={store}>
+        <App/>
+    </Provider>, root);
