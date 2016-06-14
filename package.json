@@ -4,7 +4,7 @@
   "description": "simplest reactReduxApp",
   "main": "index.js",
   "scripts": {
-    "start": "watchify --debug --extension=js -o bundle.js index.js & python -m SimpleHTTPServer"
+    "dev": "webpack-dev-server --devtool eval --progress --hot --colors --content-base app"
   },
   "repository": {
     "type": "git",
@@ -21,20 +21,45 @@
   },
   "browserify": {
     "transform": [
-      [ "babelify", { "presets": ["es2015", "react"] } ]
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ]
+        }
+      ]
     ]
   },
-  "dependencies": {
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2",
-    "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
-  },
   "devDependencies": {
-    "babel-preset-es2015": "^6.6.0",
-    "babel-preset-react": "^6.5.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.0.1",
-    "watchify": "^3.7.0"
+    "autoprefixer-loader": "*",
+    "babel": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-plugin-react-transform": "^2.0.0",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-0": "^6.3.13",
+    "copy-webpack-plugin": "*",
+    "css-loader": "*",
+    "extract-text-webpack-plugin": "*",
+    "file-loader": "*",
+    "less": "*",
+    "less-loader": "*",
+    "react-transform-hmr": "^1.0.2",
+    "style-loader": "*",
+    "url-loader": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.5.0",
+    "immutable": "^3.7.6",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.4.0",
+    "react-router": "^2.0.0",
+    "redux": "^3.3.1"
   }
 }
