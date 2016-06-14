@@ -1,36 +1,10 @@
 {
-  "name": "reactReduxApp",
-  "version": "0.0.0",
-  "description": "simplest reactReduxApp",
-  "main": "index.js",
+  "name": "Tinker404",
+  "version": "",
+  "description": "",
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --hot --colors --content-base app"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jackielii/simplest-redux-example.git"
-  },
-  "keywords": [
-    "redux",
-    "react"
-  ],
-  "author": "henry yan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jackielii/simplest-redux-example/issues"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015",
-            "react"
-          ]
-        }
-      ]
-    ]
+    "dev": "webpack-dev-server --devtool eval --progress --hot --colors --content-base app",
+    "build": "rm -rf dist/*; webpack --config ./webpack.build.config.js"
   },
   "devDependencies": {
     "autoprefixer-loader": "*",
