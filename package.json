@@ -1,7 +1,7 @@
 {
-  "name": "simplest-redux-example",
+  "name": "reactReduxApp",
   "version": "0.0.0",
-  "description": "simplest redux + react example",
+  "description": "simplest reactReduxApp",
   "main": "index.js",
   "scripts": {
     "start": "watchify --debug --extension=js -o bundle.js index.js & python -m SimpleHTTPServer"
@@ -14,7 +14,7 @@
     "redux",
     "react"
   ],
-  "author": "Jackie Li",
+  "author": "henry yan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jackielii/simplest-redux-example/issues"
@@ -24,7 +24,6 @@
       [ "babelify", { "presets": ["es2015", "react"] } ]
     ]
   },
-  "homepage": "https://github.com/jackielii/simplest-redux-example#readme",
   "dependencies": {
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
