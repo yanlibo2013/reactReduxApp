@@ -10,7 +10,7 @@ export default class Home extends Component {
                     {title.map((item, key)=> {
                         return (
                             <li key={key}>
-                                <a  href="#">
+                                <a  href="#test">
                                     {item}
                                 </a>
                             </li>
